@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip to Web</title>
+    <link href="{{ url_for('static', filename='main.css') }}" rel="stylesheet">
+    <link rel="shortcut icon" href="/static/images/55.ico" type="image/x-icon">
+    <link rel="icon" href="/static/images/55.ico" type="image/x-icon">
+</head>
+<body class="before-load">
+    <div class="loading">
+        <svg class= "loading-circle">
+            <circle cx = "50%" cy = "50%" r ="25"></circle>
+        </svg>
+    </div>
+    <div class="container">
+        <nav class = "global-nav">
+            <div class="global-nav-links">
+                <a href="/" class="global-nav-item">웹으로 떠나는 여행</a>
+                <!-- <a href="#" class="global-nav-item">웹</a> -->
+                <a href="/video" class="global-nav-item">Video</a>
+            </div>
+        </nav>
+        <nav class="local-nav">
+            <div class="local-nav-links">
+                <a href="/" class="product-name">Trip to Web</a>
+                <a href="/web3">개요</a>
+                <a href="https://www.skyscanner.co.kr/" target="_blank">항공편 예약하기</a>
+                <!-- <a href="#">구입하기</a> -->
+            </div>
+        </nav>
+        <section class="scroll-section" id="scroll-section-0">
+            <h1>TRIP TO WEB</h1>
+            <div class="sticky-elem sticky-elem-canvas">
+                <canvas id="video-canvas-0" width="1920" height="1080"></canvas>
+            </div>
+            <div class="sticky-elem main-message a">
+                <p>마스크 없이는<br> 나갈수 없는 지금</p>
+            </div>
+            <div class="sticky-elem main-message b">
+                <p>우리는<br> 웹으로 떠난다!!</p>
+            </div>
+            <div class="sticky-elem main-message c">
+                <p>웹으로 떠나는 여행<br> 일본편</p>
+            </div>
+            <div class="sticky-elem main-message d">
+                <p>출바ㅏㅏㅏㅏ<br>ㅏㅏㅏㅏ알</p>
+            </div>
+        </section>
+        <section class="scroll-section" id="scroll-section-1">
+            <p class="description a" id='desc-msgA'>
+                <strong>짧은 비행소요시간 </strong>
+                <!-- <br><br><br> 인천 -> 삿포로 2시간 40분 -->
+                <img src="/static/images/4.jpg"alt="analy-data1" width="1000" >
+            </p> 
+            <p class="description b" id='desc-msgB'>
+                <strong>다양한 관광</strong>
+                <!-- <br><br><br><br> 뚜렷한 사계절 -->
+                <img src="/static/images/5.jpg" alt="analy-data2" width="1000" > 
+            </p>
+            <p class="description c" id='desc-msgC'>
+                <strong>맛있는 음식</strong>
+                <!-- <br><br><br><br> 스시, 우동, 라멘 -->
+                <img src="/static/images/6.jpg" alt="analy-data3" width="1000" > 
+            </p>
+        </section>
+        <section class="scroll-section" id="scroll-section-2">
+            <div class="sticky-elem sticky-elem-canvas">
+                <canvas id="video-canvas-1" width="1920" height="1080"></canvas>
+            </div>
+            <div class="sticky-elem main-message a">
+                <p>
+                    <small>교토</small>
+                           도리이 게이트
+                </p>
+            </div>
+            <!-- <div class="sticky-elem desc-message b">
+                <p>보드타러가고싶다..<br> 보드타러가고싶다..</p>
+                <div class="pin"></div>
+            </div> -->
+            <div class="sticky-elem desc-message c">
+                <p> 금각사<br> <small>교토</small></p>
+                <div class="pin"></div>
+            </div>
+            <div class="sticky-elem main-message d">
+                <p>
+                    <small>미야지마</small>
+                           이쓰쿠시마
+                </p>
+            </div>
+        </section>
+        <section class="scroll-section" id="scroll-section-3">
+            <p class="mid-message">
+                <strong>Today</strong>
+                 당신의 여행지는 어디인가요?
+                
+            </p>
+            <canvas class="image-blend-canvas" width="1920" height="1080"></canvas>
+            <p class="canvas-caption">
+                웹으로 떠나는 여행 <br> 일본편 <br>준비 되셨나요?<br>
+            </p>
+        </section>
+        <div class="frame">
+            <button class="custom-btn btn-15">
+                <a href="/web2" class="last-btn">Trip to Web</a>
+            </button>
+        </div>
+        <div id="form-div">
+            <form class="form" id="form1" action="/set_email" method="post">
+              <p class="email">
+                <input name="user_email" type="email" class="validate[required,custom[email]] feedback-input" id="email" placeholder="이메일을 입력해주세요" />
+              </p>
+              <div class="submit">
+                <input type="submit" value="SUBSCRIBE" id="button-blue"/>
+                <div class="ease"></div>
+              </div>
+            </form>
+          </div>
+        <footer class="footer">구독하고 다양한 정보를 받아가세요.</footer>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}" ></script>
+</body>
+</html>

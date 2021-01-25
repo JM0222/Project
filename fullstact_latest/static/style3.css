@@ -1,0 +1,103 @@
+@font-face {
+    src: url("/static/fonts/HangeulNuriB.ttf");
+    font-family: "HangeulNurl";
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+	color: rgb(29, 29, 31) !important;
+	text-decoration: none; 
+    font-family: "HangeulNurl" !important;
+
+}
+nav {
+	background: white;
+
+}
+.global-nav-links,
+.local-nav-links {
+	display: flex;
+	align-items: center;
+	max-width: 1000px;
+	height: 100%;
+	margin: 0 auto;
+    font-family: 'HangulNurl';
+
+}
+.global-nav-links {
+    margin-top: 2vh;
+	justify-content: space-between;
+}
+.local-nav-links .product-name {
+	margin-right: auto;
+	font-size: 1.4rem;
+	font-weight: bold;
+}
+.local-nav-links a {
+	font-size: 0.8rem;
+}
+.local-nav-links a:not(.product-name) {
+	margin-left: 2em;
+}
+.container2 {
+
+    overflow-x: hidden;
+    overflow-y: hidden; 
+    /* margin-top: 15vh !important; */
+}
+.global-nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	height: 44px;
+	padding: 0 1rem;
+    font-family: 'HangulNurl';
+
+}
+.local-nav {
+	position: absolute;
+	top: 45px;
+	left: 0;
+	z-index: 11;
+	width: 100%;
+	height: 52px;
+	padding: 0 1rem;
+	border-bottom: 1px solid #ddd;
+    font-family: 'HangulNurl';
+
+}
+.carousel
+{
+    transform: translateY(-140px) !important;
+    height: 800px;
+    perspective: 650px;
+}
+.carousel .carousel-item
+{
+    width: 700px;
+}
+.carousel .carousel-item img
+{
+    width: 100%;
+}
+.carousel .carousel-item h3
+{
+    margin: -15px 0 0;
+    padding: 0;
+    background: black;
+    color:white;
+    box-sizing: border-box;
+    padding: 10px 5px;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'HangeulNurl';
+}
+

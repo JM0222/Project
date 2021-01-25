@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+    <title>Trip to Web</title>
+    <link rel="shortcut icon" href="/static/images/55.ico" type="image/x-icon">
+    <link rel="icon" href="/static/images/55.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container2">
+        <nav class = "global-nav">
+            <div class="global-nav-links">
+                <a href="/" class="global-nav-item">웹으로 떠나는 여행</a>
+                <!-- <a href="#" class="global-nav-item">웹</a> -->
+                <a href="/video" class="global-nav-item">Video</a>
+            </div>
+        </nav>
+        <nav class="local-nav">
+            <div class="local-nav-links">
+                <a href="/" class="product-name">Trip to Web</a>
+                <a href="/web3">개요</a>
+                <a href="https://www.skyscanner.co.kr/" target="_blank">항공편 예약하기</a>
+                <!-- <a href="#">구입하기</a> -->
+            </div>
+        </nav>
+    <div class="container">
+        <div class="box box1">
+            <video src="/static/video/111.mp4" autoplay loop muted></video>
+            <div class="content">
+                <h2>People</h2>
+            </div>
+        </div>
+        <div class="box box2">
+            <video src="/static/video/222.mp4" autoplay loop muted></video>
+            <div class="content">
+                <h2>View</h2>
+            </div>
+        </div>
+        <div class="box box3">
+            <video src="/static/video/333.mp4" autoplay loop muted></video>
+            <div class="content">
+                <h2>Food</h2>
+            </div>
+        </div>
+        <div class="box box4">
+            <video src="/static/video/444.mp4" autoplay loop muted></video>
+            <div class="content">
+                <h2>Tour</h2>
+            </div>
+        </div>
+    </div>
+    <script>
+        let box = document.querySelectorAll('.box');
+        box.forEach(popup => popup.addEventListener('click', ()=> {
+            popup.classList.toggle('active')
+        }))
+    </script>
+</body>
+</html>

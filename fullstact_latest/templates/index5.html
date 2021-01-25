@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="{{ url_for('static', filename='style3.css') }}" rel="stylesheet">
+    <link rel="shortcut icon" href="/static/images/55.ico" type="image/x-icon">
+    <link rel="icon" href="/static/images/55.ico" type="image/x-icon">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container2">
+        <nav class = "global-nav">
+            <div class="global-nav-links">
+                <a href="/" class="global-nav-item">웹으로 떠나는 여행</a>
+                <!-- <a href="#" class="global-nav-item">웹</a> -->
+                <a href="/video" class="global-nav-item">Video</a>
+            </div>
+        </nav>
+        <nav class="local-nav">
+            <div class="local-nav-links">
+                <a href="/" class="product-name">Trip to Web</a>
+                <a href="/web3">개요</a>
+                <a href="https://www.skyscanner.co.kr/" target="_blank">항공편 예약하기</a>
+                <!-- <a href="#">구입하기</a> -->
+            </div>
+        </nav>
+    <div class="carousel">
+        <div class="carousel-item">
+            <img src="/static/images/15.jpg" alt="">
+            <h3>아키하바라</h3>
+        </div>
+        <div class="carousel-item">
+            <img src="/static/images/16.jpg" alt="">
+            <h3>센소지</h3>
+        </div><div class="carousel-item">
+            <img src="/static/images/17.jpg" alt="">
+            <h3>아사쿠사</h3>
+        </div><div class="carousel-item">
+            <img src="/static/images/18.jpg" alt="">
+            <h3>레인보우브릿지</h3>
+        </div><div class="carousel-item">
+            <img src="/static/images/19.jpg" alt="">
+            <h3>도쿄타워</h3>
+        </div>
+    </div>
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.carousel').carousel();
+        });
+    </script>
+</body>
+</html>
