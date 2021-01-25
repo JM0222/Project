@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Trip to Web</title>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;900&display=swap" rel="stylesheet">
+	<link href="{{ url_for('static', filename='main2.css') }}" rel="stylesheet">
+	<link rel="shortcut icon" href="/static/images/55.ico" type="image/x-icon">
+    <link rel="icon" href="/static/images/55.ico" type="image/x-icon">
+
+</head>
+<body class="before-load">
+	<div class="loading">
+		<svg class="loading-circle">
+			<circle cx="50%" cy="50%" r="25"></circle>
+		</svg>
+	</div>
+	<div class="container">
+		<section class="scroll-section" id="scroll-section-0">
+			<h1>Trip to JAPAN</h1>
+			<object class="sticky-elem pencil-logo" data="/static/images/pencil-logo.svg" type="image/svg+xml"></object>
+			<div class="sticky-elem main-message a">
+				<p>지금</p>
+			</div>
+			<span class="sticky-elem ribbon-path">
+				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 700 450" style="enable-background:new 0 0 700 450;" xml:space="preserve">
+				<path class="st0" d="M730.5-26.5c-9-1-875,273-769,284s748-1,783,7s-769,193-769,193"/>
+				</svg>
+			</span>
+			<div class="sticky-elem main-message b">
+				<p>가고싶은 곳 어디든</p>
+			</div>
+		</section>
+		<section class="carousel">
+			<div class="slider">
+				<div class="slides">
+					<input type="radio" name="radio-btn" id="radio1">
+					<input type="radio" name="radio-btn" id="radio2">
+					<input type="radio" name="radio-btn" id="radio3">
+					<input type="radio" name="radio-btn" id="radio4">
+					<div class="slide first">
+						<img src="/static/images/11.jpg" alt="">
+					</div>
+					<div class="slide">
+						<img src="/static/images/12.jpg" alt="">
+					</div>
+					<div class="slide">
+						<img src="/static/images/13.jpg" alt="">
+					</div>
+					<div class="slide">
+						<img src="/static/images/14.jpg" alt="">
+					</div>
+					<div class="navigation-auto">
+						<div class="auto-btn1"></div>
+						<div class="auto-btn2"></div>
+						<div class="auto-btn3"></div>
+						<div class="auto-btn4"></div>
+					</div>
+				</div>
+				<div class="navigation-manual">
+					<label for="radio1" class="manual-btn"></label>
+					<label for="radio2" class="manual-btn"></label>
+					<label for="radio3" class="manual-btn"></label>
+					<label for="radio4" class="manual-btn"></label>
+				</div>
+			</div>
+		<div class="frame">
+			<button class="custom-btn btn-15">
+				<a href="/web4" class="last-btn">Trip to Web</a>
+			</button>
+		</div>
+			<script type="text/javascript">
+			var counter = 1;
+			setInterval(function(){
+				document.getElementById('radio' + counter).checked = true;
+				counter++;
+				if (counter > 4){
+					counter = 1;
+				}
+			}, 5000);
+			</script>
+		</section>	
+	</div>
+	<script src="{{ url_for('static', filename='js/main2.js') }}" ></script>
+</body>
+</html>

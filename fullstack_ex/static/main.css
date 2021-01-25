@@ -1,0 +1,447 @@
+@font-face {
+    src: url("/static/fonts/HangeulNuriB.ttf");
+    font-family: "HangeulNurl";
+}
+html {
+    font-family: "HangeulNurl";
+    font-size: 14px;
+}
+body {
+    overflow-x : hidden;
+    color: white;
+    letter-spacing: -0.05em;
+    background: white;
+}
+p {
+    line-height: 1.6;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+.frame a {
+    color: white;
+}
+.global-nav{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 10;
+    width: 100%;
+    height: 44px;
+    padding:0 1rem;
+}
+.local-nav-sticky .local-nav {
+    position: fixed;
+    top:0;
+    background: rgba(255,255,255,0.1);;
+    -webkit-backdrop-filter: saturate(180%) blur(15px);
+    backdrop-filter: saturate(180%) blur(15px);
+}
+.local-nav{
+    position: absolute;
+    top:45px;
+    left:0;
+    width: 100%;
+    z-index: 11;
+    height: 52px;
+    border-bottom: 1px solid #ccc;
+    padding:0 1rem;
+}
+.global-nav-links,
+.local-nav-links {
+    max-width: 1000px;     
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: 100%; 
+}
+.global-nav-links {
+    justify-content: space-between;
+}
+.local-nav-links .product-name {
+    margin-right: auto;
+    font-size:1.2rem;
+    font-weight: bold;
+}
+.local-nav-links a:not(.product-name) {
+    margin-left: 2em;
+}
+.local-nav-links a {
+    font-size: 1rem;
+}
+/* 스크롤 섹션 */
+.scroll-section {
+    position: relative;
+    padding-top: 50vh;
+}
+#scroll-section-0 h1{
+    font-size:4rem;
+    text-align: center;
+    z-index: 5;
+    position: relative;
+    top:-35vh;
+}
+.main-message {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    height:3em;
+    font-size:2.5rem;
+    margin: 5px 0;
+    opacity: 0;
+    top:30vh;
+}
+.main-message p {
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2;
+}
+.main-message small {
+    display:block;
+    font-size: 1.2rem;
+    margin-bottom: 0.5em;
+}
+#scroll-section-2 .main-message {
+    font-size:3.5rem;
+}
+
+.description {
+    padding:0 1rem;
+    font-size: 1.2rem;
+    color:black;
+    max-width: 1000px;
+    margin:0 auto;
+    opacity: 0;
+}
+.description strong {
+    font-size: 3rem;
+    float:left;
+    color:black;
+    margin-right: 0.2em;
+}
+.desc-message {
+    width: 50%;
+    font-weight: bold;
+    opacity: 0;
+    
+}
+.pin {
+    width: 1px;
+    height: 100px;
+    background: black;
+}
+/* #scroll-section-2 .b {
+    top: 10%;
+    left: 40%;
+    color:black;
+} */
+#scroll-section-2 .c {
+    top: 10%;
+    left: 60%;
+    color:black;
+    font-size: 3.5rem;
+
+}
+.mid-message {
+    font-size:2rem;
+    padding:0 1rem;
+    color: black;
+    max-width: 1000px;
+    margin:0 auto;
+}
+.mid-message strong {
+    color:grey;
+}
+.canvas-caption {
+	max-width: 1000px;
+	margin: 10rem auto 0;
+	padding: 0 1rem;
+	font-size: 7.2rem;
+    color: black;
+}
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 7rem;
+    background: grey;
+    font-size: 2rem;
+}
+.sticky-elem {
+    display: none;
+    position: fixed;
+    left:0;
+    width:100%;
+}
+.sticky-elem-canvas{
+    top:0;
+    height: 100%;
+}
+.sticky-elem-canvas canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.image-blend-canvas.sticky {
+    position: fixed;
+    top:0;
+
+}
+#scroll-section-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#show-scene-0 #scroll-section-0 .sticky-elem,
+#show-scene-1 #scroll-section-1 .sticky-elem,
+#show-scene-2 #scroll-section-2 .sticky-elem,
+#show-scene-3 #scroll-section-3 .sticky-elem {
+    display: block;
+}
+@keyframes loading-spin {
+    100% { transform: rotate(360deg);}
+}
+@keyframes loading-circle-ani {
+    0% {stroke-dashoffset: 157;}
+    75% {stroke-dashoffset: -147;}
+    100% {stroke-dashoffset: -157;}
+}
+.container {
+    overflow-x: hidden;
+}
+.before-load .loading {
+    opacity: 1;
+    overflow: hidden;
+}
+.loading {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    background: white;
+    opacity: 0;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loading-circle {
+    width: 54px;
+    height: 54px;
+    animation: loading-spin 3s infinite;
+}
+.loading-circle circle {
+    stroke:black;
+    stroke-width: 4;
+    fill:none;
+    stroke-dasharray: 157;
+    stroke-dashoffset: 0;
+    animation: loading-circle-ani 1s infinite;
+}
+/* html{
+  height:100%;
+} */
+
+#form-div {
+    background-color: white;
+    padding:35px 35px 50px;
+    width:833.5px;
+    left: 50%;
+    position: absolute;
+    margin-top:-252px;
+    margin-left: -452px;
+    /* -moz-border-radius: 7px;
+    -webkit-border-radius: 7px; */
+}
+  
+.feedback-input {
+    color:#3c3c3c;
+    font-family: 'HangeulNurl';
+    font-weight:500;
+    font-size: 18px;
+    border-radius: 3px;
+    line-height: 22px;
+    background-color: white;
+    padding: 13px 13px 13px 54px;
+    margin-bottom: 10px;
+    width:100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    /* border: 3px solid rgba(0,0,0,0); */
+}
+  
+.feedback-input:focus{
+    background: #fff;
+    box-shadow: 0;
+    /*border: 3px solid #3498db;*/
+    border-color: #3498db;
+    color: #3498db;
+    outline: none;
+    /*padding: 13px 13px 13px 54px;*/
+}
+
+.focused {
+    color:#30aed6;
+    /* border:#30aed6 solid 3px; */
+}
+
+
+textarea {
+    width: 100%;
+    height: 150px;
+    line-height: 150%;
+    resize:vertical;
+}
+
+input:hover, textarea:hover,
+input:focus, textarea:focus {
+    background-color:white;
+}
+
+#button-blue{
+    float:left; /* 플롯 중요(::after 가상요소 이용)*/
+    width: 100%;
+    border: white solid 4px;
+    cursor:pointer;
+    background-color: #3498db;
+    color:white;
+    font-size:24px;
+    padding-top:22px;
+    padding-bottom:22px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+    
+}
+
+#button-blue:hover{
+    background-color: black;
+    color: white;
+}
+
+.ease {
+    width: 0;
+    height: 74px;
+    background-color: #fbfbfb;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -o-transition: .3s ease;
+    -ms-transition: .3s ease;
+    transition: .3s ease;
+}
+
+.submit:hover .ease{
+    width:100%;
+    background-color:white;
+}
+
+.frame {
+    width: 100%;
+    margin-top:-252px;
+    margin-left: -452px;
+    text-align: center;
+  }
+button {
+margin: 100vh;
+}
+.custom-btn {
+width: 900px;
+height: 200px;
+color: #fff !important;
+border-radius: 5px;
+padding: 10px 25px;
+font-family: 'HangeulNurl';
+font-weight: 500;
+font-size: 4rem;
+background: transparent;
+cursor: pointer;
+transition: all 0.3s ease;
+position: relative;
+display: inline-block;
+box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+7px 7px 20px 0px rgba(0,0,0,.1),
+4px 4px 5px 0px rgba(0,0,0,.1);
+outline: none;
+}
+/* 15 */
+.btn-15 {
+background: #b621fe;
+border: none;
+z-index: 1;
+}
+.btn-15:after {
+position: absolute;
+content: "";
+width: 0;
+height: 100%;
+top: 0;
+right: 0;
+z-index: -1;
+background-color: #663dff;
+border-radius: 5px;
+box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+7px 7px 20px 0px rgba(0,0,0,.1),
+4px 4px 5px 0px rgba(0,0,0,.1);
+transition: all 0.3s ease;
+}
+.btn-15:hover {
+color: white;
+}
+.btn-15:hover:after {
+left: 0;
+width: 100%;
+}
+.btn-15:active {
+top: 2px;
+}
+/* 창크기가 1024이상이 될경우 */
+@media (min-width: 1024px) {
+    #scroll-section-0 h1 {
+        font-size:9vw;
+    }
+    .main-message {
+        font-size:4vw;
+    }
+    .description {
+        font-size: 2rem;
+    }
+    .description strong {
+        font-size: 6rem;
+    }
+    #scroll-section-2 .main-message {
+        font-size: 6vw;
+    }
+    .main-message small {
+        font-size: 1.5vw;
+    }
+    .desc-message {
+        width:20%;
+    }
+    #scroll-section-2 .b {
+        top: 20%;
+        left: 53%;
+    }
+    #scroll-section-2 .c {
+        left: 55%;
+    }
+    .mid-message {
+        font-size: 4vw;
+        width: 1000px;
+        padding: 0;
+    }
+	.canvas-caption {
+		margin-top: -12rem;
+		padding: 0;
+		font-size: 4rem;
+    }
+}
+
+
+

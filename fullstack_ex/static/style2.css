@@ -1,0 +1,108 @@
+@font-face {
+    src: url("/static/fonts/HangeulNuriB.ttf");
+    font-family: "HangulNurl";
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'HangulNurl';
+}
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+a {
+	color: rgb(29, 29, 31);
+	text-decoration: none;
+}
+.global-nav-links,
+.local-nav-links {
+	display: flex;
+	align-items: center;
+	max-width: 1000px;
+	height: 100%;
+	margin: 0 auto;
+}
+.global-nav-links {
+    margin-top: 2vh;
+	justify-content: space-between;
+}
+.local-nav-links .product-name {
+	margin-right: auto;
+	font-size: 1.4rem;
+	font-weight: bold;
+}
+.local-nav-links a {
+	font-size: 0.8rem;
+}
+.local-nav-links a:not(.product-name) {
+	margin-left: 2em;
+}
+.container2 {
+
+    overflow-x: hidden;
+    overflow-y: hidden; 
+    margin-top: 15vh !important;
+}
+.global-nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	height: 44px;
+	padding: 0 1rem;
+}
+.local-nav {
+	position: absolute;
+	top: 45px;
+	left: 0;
+	z-index: 11;
+	width: 100%;
+	height: 52px;
+	padding: 0 1rem;
+	border-bottom: 1px solid #ddd;
+}
+section .container h2 {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size:5em;
+    line-height: 0.9em;
+    letter-spacing: 5px;
+}
+section .container h2 span {
+    position: relative;
+    z-index:1;
+    color:red;
+    animation: animate 5s linear infinite;
+}
+section .container h2 span.text1 {
+    /* animation-delay: 1s; */
+    filter:hue-rotate(.5turn);
+}
+section .container h2 span.text2 {
+    /* animation-delay: 1s; */
+    filter:hue-rotate(.5turn);
+}
+@keyframes animate {
+    0%, 5%, 10.1%, 15.1%, 25.1%, 45%, 90%,100%
+    {
+        color:#DF678C;
+        opacity: 1; 
+       
+
+    }
+    5.1%,10%,15.2%, 25%, 45.1%, 90.1%,95%
+    {
+        color:#3D155F;
+        opacity: 0;
+       
+        
+        ;
+    }
+}
